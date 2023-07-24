@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body style="text-align"
+
+    <h1>Bienvenue !</h1>
+
+    <p>Vous pouvez <a href="/gossips/new">créer un nouveau potin</a>.</p>
+
+    <h1><u>Liste des potins</u></h1>
+
+    <ul>
+      <!-- Boucle pour parcourir tous les potins et les afficher -->
+      <% @gossips.each_with_index do |gossip, index| %>
+        <!-- Élément de liste pour chaque potin -->
+        <li>
+          <!-- Lien vers la page de détails du potin -->
+          <a href="/gossips/<%= index +1 %>">Potin N°<%= index +1 %></a>
+
+
+        </li>
+      <% end %>
+    </ul>
+  </body>
+</html>

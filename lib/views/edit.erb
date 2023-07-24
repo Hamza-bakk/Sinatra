@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modifier le potin</title>
+</head>
+<body>
+  <center> <!-- Balise pour centrer le contenu -->
+    <h1>Modifier le potin</h1>
+    <!-- Spécifiez la méthode PUT avec le paramètre caché _method -->
+    <form action="/gossips/<%= @gossip.id %>" method="post">
+      <!-- Ajoutez le paramètre caché pour simuler une requête PUT -->
+      <input type="hidden" name="_method" value="put">
+
+      <label for="author">Auteur :</label>
+      <input type="text" id="author" name="author" value="<%= @gossip.author %>"><br>
+
+      <label for="content">Contenu :</label>
+      <textarea id="content" name="content"><%= @gossip.content %></textarea><br>
+
+      <!-- Utilisez la méthode PUT pour soumettre le formulaire -->
+      <input type="submit" value="Mettre à jour">
+    </form>
+  </center>
+</body>
+</html>
